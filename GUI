@@ -1,0 +1,337 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("Discord GUI by Skim#0005 (i changed my username)")
+
+local serv = win:Server("SkimHub V2", "")
+
+local btns = serv:Channel("Admin Tools")
+
+btns:Button("CMD-X", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+end)
+
+btns:Button("Execute this before using an animation even when you die", function()
+    for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+game:GetService("RunService").Heartbeat:connect(function()
+v.Velocity = Vector3.new(0,35,0)
+wait(0.5)
+end)
+end
+end
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "Notification";
+	Text = "Netless activated";
+	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+Duration = 16;
+end)
+
+btns:Button("Server Admin Animation + Fling (Shift + R to reset)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/ughru/main/fegfezg"))()
+end)
+
+btns:Button("Annoyer GUI FE By Me", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/Annoyer-GUI/main/GUI", true))()
+end)
+
+btns:Button("Fates Admin (not working on pizza place)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
+
+btns:Button("Remove Reports", function()
+    setfflag("AbuseReportScreenshotPercentage", 0)
+setfflag("DFFlagAbuseReportScreenshot", "False")
+end)
+
+btns:Button("Not tags (BANNABLE !, broken for now waiting for update)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/bedra45/chetbypasser/main/chetbypass'))()
+end)
+
+btns:Seperator()
+
+btns:Button("Telekinesis GUN", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/telekinesis/main/telekinesis", true))()
+end)
+
+local tgls = serv:Channel("Work At Pizza Place")
+
+tgls:Button("Pizza Place GUI OP RARE", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/b19b733fb8e9e0299381653c50e21e49/raw/a0c7394ba4451c6c548979103aea600d89b70f32/xxxcccc", true))()
+end)
+tgls:Button("Change Animation", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/FORCE-RTHRO-ANIMATION/main/real", true))()
+end)
+tgls:Button("Take OverTchat", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/gregergergfdvf/main/hthreherhchat", true))()
+end)
+tgls:Button("Steal Manager", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/hrthtryh/main/grdgdrg", true))()
+end)
+tgls:Button("Play Server admin joined sound FE", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/gregergher/main/fezfz", true))()
+end)
+tgls:Button("Bypassed Word (ass)", function()
+    game.Workspace.Main.Chatted:FireServer("aˤ̴ss", false)
+end)
+tgls:Button("Bypassed Word (Motherfucker)", function()
+game.Workspace.Main.Chatted:FireServer("mˤ̴otherfuˤ̴c̴ker", false)
+end)
+tgls:Button("Bypassed Word (Puta)", function()
+game.Workspace.Main.Chatted:FireServer("pˤ̴uta", false)
+end)
+tgls:Button("Bypassed Word (Nigger)", function()
+game.Workspace.Main.Chatted:FireServer("Nˤ̴igˤ̴ger", false)
+end)
+tgls:Button("Bypassed Word (Nigga)", function()
+game.Workspace.Main.Chatted:FireServer("Nˤ̴igˤ̴ga", false)
+end)
+tgls:Button("Bypassed Word (Hitler)", function()
+game.Workspace.Main.Chatted:FireServer("hˤ̴itleˤ̴r", false)
+end)
+tgls:Button("Bypassed Word (nazi)", function()
+game.Workspace.Main.Chatted:FireServer("nˤ̴azi", false)
+end)
+tgls:Button("Bypassed Word (Ta mère la pute)", function()
+game.Workspace.Main.Chatted:FireServer("Tˤ̴a mˤ̴ère lˤ̴a pˤ̴ute", false)
+end)
+tgls:Button("Bypassed Word (wtf)", function()
+game.Workspace.Main.Chatted:FireServer("wˤ̴tf", false)
+end)
+tgls:Button("Bypassed Word (Piece of shit)", function()
+game.Workspace.Main.Chatted:FireServer("Pˤ̴iece oˤ̴f shˤ̴it", false)
+end)
+
+
+local tgls = serv:Channel("Flee The Killer")
+
+tgls:Button("Flee The Killer GUI BETA", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/ROBLOX-SURVIVE-THE-KILLER-GUI/main/Script", true))()
+end)
+
+tgls:Button("ESP", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/kvr0AuWz", true))()
+end)
+
+local tgls = serv:Channel("Miscs")
+
+tgls:Button("Invisible", function()
+local offset = 1100 --how far you are away from your camera when invisible
+local LocalPlayer = game.Players.LocalPlayer
+local Backpack = LocalPlayer.Backpack
+local Character = LocalPlayer.Character
+local invisible = false
+local grips = {}
+local heldTool
+local gripChanged
+local handle
+local weld
+function setDisplayDistance(distance)
+   for _,player in pairs(game.Players:GetPlayers()) do if player.Character and player.Character:FindFirstChildWhichIsA("Humanoid") then player.Character:FindFirstChildWhichIsA("Humanoid").NameDisplayDistance = distance player.Character:FindFirstChildWhichIsA("Humanoid").HealthDisplayDistance = distance end end
+end
+local tool = Instance.new("Tool", Backpack)
+tool.Name = "Ghostify [Disabled]"
+tool.RequiresHandle = false
+tool.CanBeDropped = false
+tool.Equipped:Connect(function() wait()
+   if not invisible then
+       invisible = true
+       tool.Name = "Ghostify [Enabled]"
+       if handle then handle:Destroy() end if weld then weld:Destroy() end
+       handle = Instance.new("Part", workspace) handle.Name = "Handle" handle.Transparency = 1 handle.CanCollide = false handle.Size = Vector3.new(2, 1, 1)
+       weld = Instance.new("Weld", handle) weld.Part0 = handle weld.Part1 = Character.HumanoidRootPart weld.C0 = CFrame.new(0, offset-1.5, 0)
+       setDisplayDistance(offset+100)
+       workspace.CurrentCamera.CameraSubject = handle
+       Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.new(0, offset, 0)
+       Character.Humanoid.HipHeight = offset
+       Character.Humanoid:ChangeState(11)
+       for _,child in pairs(Backpack:GetChildren()) do if child:IsA("Tool") and child ~= tool then grips[child] = child.Grip end end
+   elseif invisible then
+       invisible = false
+       tool.Name = "Ghostify [Disabled]"
+       if handle then handle:Destroy() end if weld then weld:Destroy() end
+       for _,child in pairs(Character:GetChildren()) do if child:IsA("Tool") then child.Parent = Backpack end end
+       for tool,grip in pairs(grips) do if tool then tool.Grip = grip end end
+       heldTool = nil
+       setDisplayDistance(100)
+       workspace.CurrentCamera.CameraSubject = Character.Humanoid
+       Character.Animate.Disabled = false
+       Character.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame * CFrame.new(0, -offset, 0)
+       Character.Humanoid.HipHeight = 0
+       Character.Humanoid:ChangeState(11)
+   end
+   tool.Parent = Backpack
+end)
+Character.ChildAdded:Connect(function(child) wait()
+   if invisible and child:IsA("Tool") and child ~= heldTool and child ~= tool then
+       heldTool = child
+       local lastGrip = heldTool.Grip
+       if not grips[heldTool] then grips[heldTool] = lastGrip end
+       for _,track in pairs(Character.Humanoid:GetPlayingAnimationTracks()) do track:Stop() end
+       Character.Animate.Disabled = true
+       heldTool.Grip = heldTool.Grip*(CFrame.new(0, offset-1.5, 1.5) * CFrame.Angles(math.rad(-90), 0, 0))
+       heldTool.Parent = Backpack
+       heldTool.Parent = Character
+       if gripChanged then gripChanged:Disconnect() end
+       gripChanged = heldTool:GetPropertyChangedSignal("Grip"):Connect(function() wait()
+           if not invisible then gripChanged:Disconnect() end
+           if heldTool.Grip ~= lastGrip then
+               lastGrip = heldTool.Grip*(CFrame.new(0, offset-1.5, 1.5) * CFrame.Angles(math.rad(-90), 0, 0))
+               heldTool.Grip = lastGrip
+               heldTool.Parent = Backpack
+               heldTool.Parent = Character
+           end
+       end)
+   end
+end)
+end)
+
+tgls:Button("Become MINI RICK !", function()
+--Shit ass script made by failedmite57926
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Character = LocalPlayer.Character
+local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+local function rm()
+    for i,v in pairs(Character:GetDescendants()) do
+        if v:IsA("BasePart") then
+            if v.Name ~= "Head" then
+                for i,cav in pairs(v:GetDescendants()) do
+                    if cav:IsA("Attachment") then
+                        if cav:FindFirstChild("OriginalPosition") then
+                            cav.OriginalPosition:Destroy()
+                        end
+                    end
+                end
+                v:FindFirstChild("OriginalSize"):Destroy()
+                if v:FindFirstChild("AvatarPartScaleType") then
+                    v:FindFirstChild("AvatarPartScaleType"):Destroy()
+                end
+            end
+        end
+    end
+end
+
+rm(10)
+
+wait(0.5)
+
+Humanoid:FindFirstChild("BodyTypeScale"):Destroy()
+
+wait(1)
+
+rm(10)
+
+wait(0.5)
+
+Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+
+wait(1)
+
+rm(10)
+
+wait(0.5)
+
+Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+
+wait(1)
+
+rm(10)
+
+wait()
+end)
+
+
+local sldrs = serv:Channel("Modificator")
+
+sldrs:Button("Delete Tool (Client Side)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/btools/main/gegy(er", true))()
+end)
+
+local drops = serv:Channel("Animations")
+
+
+
+drops:Button("Execute this before use any animations even when you die", function()
+    for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+game:GetService("RunService").Heartbeat:connect(function()
+v.Velocity = Vector3.new(0,35,0)
+wait(0.5)
+end)
+end
+end
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "Notification";
+	Text = "Netless activated";
+	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+Duration = 16;
+end)
+
+drops:Button("Car", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MonkoTubeYT/carscript/master/!carscript.lua',true))()
+end)
+
+drops:Button("Chill Animation (Shift + R to reset)", function()
+    loadstring(game:HttpGetAsync("https://pastebin.com/raw/XmHFdTij"))()
+end)
+
+drops:Button("Spider", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/efsefgsefg/main/fegrgdrf", true))()
+end)
+
+drops:Button("Reanimated Animations", function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/valssss/ghreygre/main/fefgz"))()
+end)
+
+drops:Button("Nullware Reanimated", function()
+    getgenv().Nullware_ReanimateConfiguration = {
+	["Netless"] = true,
+	["Anti-Fling"] = false,
+	["Hats To Align"] = {},
+	["Head Movement"] = false,
+	["R15 To R6"] = false,
+	["Godmode"] = false
+}
+loadstring(game:HttpGetAsync("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/8cd532018277ee9982433eea25a6c14f/raw/sewMjTpJvVBLR96L"))()
+end)
+
+local clrs = serv:Channel("Aimbot And ESP and Fling")
+
+clrs:Button("ESP", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/kvr0AuWz", true))()
+end)
+
+clrs:Button("AIMBOT", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/efsefez/main/gregreg", true))()
+end)
+
+clrs:Button("Invisible Fling", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/kvr0AuWz", true))()
+end)
+
+clrs:Button("Fling GUI (best)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/fze-fgzeg/main/fgzetgze", true))()
+end)
+
+clrs:Button("Bang (Require R6)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/valssss/ezgzegdzfzf/main/gergergerg", true))()
+end)
+
+local lbls = serv:Channel("C00LKID ID AND DISCORD LINK")
+
+lbls:Button("Play C00LKID SOUND (only for pizza place)", function()
+    getgenv().audioId = 7006862799 -- self explanatory
+getgenv().soundVolume = 10 -- up to 10
+loadstring(game:HttpGet('https://pastebin.com/raw/W63eMGNp'))()
+end)
+lbls:Label("By the way The id Sound code is : 7006862799")
+lbls:Label("https://discord.gg/yxq3k9vum2")
+
+serv:Channel("by RickScripter#0001")
+
+
+win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
+
